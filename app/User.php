@@ -23,4 +23,28 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get the markers from the user.
+     */
+    public function markers()
+    {
+        return $this->hasMany('App\Marker');
+    }
+
+    /**
+     * Get the rates from the user.
+     */
+    public function rates()
+    {
+        return $this->hasMany('App\Rate');
+    }
+
+    /**
+     * Get the favorites from the user.
+     */
+    public function favorites()
+    {
+        return $this->hasMany('App\Favorites');
+    }
 }
