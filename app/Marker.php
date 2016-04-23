@@ -34,6 +34,6 @@ class Marker extends Model
 	 */
 	public function favorites()
 	{
-		return $this->hasMany('App\Favorites');
+		return $this->hasMany('App\Favorite');
 	}
 }
