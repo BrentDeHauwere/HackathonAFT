@@ -21,4 +21,10 @@ Route::group(['middleware' => 'auth'], function()
 	Route::post('/marker/{id}/rate/{like}', 'RateController@store');
 	Route::delete('/marker/{id}/rate', 'RateController@destroy');
 	Route::post('/marker/{id}/favorite', 'FavoriteController@store');
+	Route::get('/profile', function() {
+		return View::make('profile');
+	});
+	Route::get('/coordinates', function() {
+		return \App\Marker::select('lng', 'lat')->get();
+	});
 });
