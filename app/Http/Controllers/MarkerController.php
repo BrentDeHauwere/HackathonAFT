@@ -77,9 +77,21 @@ class MarkerController extends Controller
 		$marker->type = $request->input('type');
 		$marker->title = $request->input('title');
 		$marker->description = $request->input('description');
-		$marker->picture = $request->input('picture');
 		$marker->user_id = Auth::id();
 		$marker->save();
+
+		if ($request->hasFile('picture'))
+		{
+			$file = $request->file('picture');
+			$destinationPath = 'uploads';
+			$extension = $file->getClientOriginalExtension();
+			$fileName = $marker->id . '.' . $extension;
+			$upload_success = $file->move($destinationPath, $fileName);
+
+			if ($upload_success) {
+				return Redirect::to('markers')->with('message', 'Image uploaded successfully');
+			}
+		}
 
 		$request->session()->flash('message', 'Successfully created marker.');
 

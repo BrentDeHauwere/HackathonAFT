@@ -15,7 +15,7 @@
 		</div>
 	@endif
 
-	<form action="{{ "/markers/$marker->id" }}" method="post">
+	<form action="{{ "/markers/$marker->id" }}" method="post" enctype="multipart/form-data">
 		<div class="form-group">
 			<label for="name">Name</label>
 			<input id="name" type="text" name="name" class="form-control" value="{{ $marker->name }}">
