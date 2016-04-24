@@ -157,7 +157,9 @@ select {
       color: #FAB57A; }
     .grid-item footer .post-profile-picture {
       width: 32px;
-      height: 32px; }
+      height: 32px;
+      float: right;
+      margin-top: 10px;}
 
 .grid-item--width2 {
   width: 300px; }
