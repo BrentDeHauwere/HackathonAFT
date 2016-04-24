@@ -18,6 +18,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 47.608941,
                 'lng'           => -122.340145,
                 'type'          => 'restaurant',
+                'title'         => 'Marker 1',
                 'description'   => 'A very nice restaurant, located in Washington',
                 'picture'       => str_random(10),
                 'user_id'       => 1
@@ -28,6 +29,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 47.613591,
                 'lng'           => -122.344394,
                 'type'          => 'bar',
+                'title'         => 'Marker 2',
                 'description'   => 'A very nice bar, located in Washington',
                 'picture'       => str_random(10),
                 'user_id'       => 2
@@ -38,6 +40,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 47.624562,
                 'lng'           => -122.356442,
                 'type'          => 'restaurant',
+                'title'         => 'Marker 3',
                 'description'   => 'A very nice restaurant, located in Washington',
                 'picture'       => str_random(10),
                 'user_id'       => 2
@@ -48,6 +51,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 47.606366,
                 'lng'           => -122.337656,
                 'type'          => 'restaurant',
+                'title'         => 'Marker 4',
                 'description'   => 'A very nice restaurant, located in Washington',
                 'picture'       => str_random(10),
                 'user_id'       => 3
@@ -59,6 +63,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 47.612825,
                 'lng'           => -122.34567,
                 'type'          => 'bar',
+                'title'         => 'Marker 5',
                 'description'   => 'A very nice bar, located in Washington',
                 'picture'       => str_random(10),
                 'user_id'       => 4

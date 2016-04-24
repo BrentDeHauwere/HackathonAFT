@@ -19,8 +19,9 @@ class CreateMarkersTable extends Migration
             $table->float('lat', 10, 6);
             $table->float('lng', 10, 6);
             $table->string('type', 30);
-            $table->longText('description');
-            $table->string('picture');
+            $table->string('title');
+            $table->longText('description')->nullable();
+            $table->string('picture')->nullable();
             $table->integer('user_id')->unsigned();
         });
     }

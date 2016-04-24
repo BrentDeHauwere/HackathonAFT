@@ -14,8 +14,8 @@ class AddConstraintsToLikesTable extends Migration
     {
         Schema::table('rates', function (Blueprint $table) {
             $table->primary(['user_id', 'marker_id']);
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('marker_id')->references('id')->on('markers');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('marker_id')->references('id')->on('markers')->onDelete('cascade');
         });
     }
 
