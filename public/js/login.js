@@ -162,7 +162,7 @@ $(document).ready(function() {
     });
     
     $("#tab2").find( "form" ).hide();
-    $("input[for='form-register']").hide();
+    $("input[form='form-register']").hide();
     
     $("#title-tab2").click(function() {
         $("#tab1").find( "form" ).hide();
@@ -170,8 +170,8 @@ $(document).ready(function() {
         $("#title-tab2").addClass("selected-tab");
         $("#title-tab1").removeClass("selected-tab");
         $(".selected-tab").css("border-radius","0 5px 0 0");
-        $("input[for='form-register']").show();
-        $("input[for='form-login']").hide();
+        $("input[form='form-register']").show();
+        $("input[form='form-login']").hide();
     });
     
     $("#title-tab1").click(function() {
@@ -180,8 +180,8 @@ $(document).ready(function() {
         $("#title-tab1").addClass("selected-tab");
         $("#title-tab2").removeClass("selected-tab");
         $(".selected-tab").css("border-radius","5px 0 0 0");
-        $("input[for='form-register']").hide();
-        $("input[for='form-login']").show();
+        $("input[form='form-register']").hide();
+        $("input[form='form-login']").show();
     });
     
     $(document).on("click", "#a-forgot-password", function() {
