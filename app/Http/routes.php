@@ -25,6 +25,6 @@ Route::group(['middleware' => 'auth'], function()
 		return View::make('profile');
 	});
 	Route::get('/coordinates', function() {
-		return \App\Marker::select('lng', 'lat')->get();
+		return \App\Marker::select('lng', 'lat', 'name')->get();
 	});
 });
