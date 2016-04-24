@@ -14,11 +14,11 @@ class CreateMarkersTable extends Migration
     {
         Schema::create('markers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 60);
-            $table->string('address', 80);
+            $table->string('name', 60)->nullable();
+            $table->string('address', 80)->nullable();
             $table->float('lat', 10, 6);
             $table->float('lng', 10, 6);
-            $table->string('type', 30);
+            $table->string('type', 30)->nullable();
             $table->string('title');
             $table->longText('description')->nullable();
             $table->string('picture')->nullable();

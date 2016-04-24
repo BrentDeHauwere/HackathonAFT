@@ -97,7 +97,6 @@
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				</form>
 			</section>
-		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCHv7f5WI-1gPWnyQXJwNup90GLu3IzELc&callback=initMap"></script>
-	</body>
+		</body>
 
 </html>
