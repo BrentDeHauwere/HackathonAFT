@@ -50,7 +50,7 @@
 			<section class="message-wall grid">
 				@foreach($markers as $key => $value)
 					<article class="wall-post grid-item" lat="{{ $value->lat }}" long="{{ $value->lng }}">
-						<h2>{{ ($value->name == null) ? $value->title : $value->name  }}</h2>
+						<h2>{{ ($value->name == null) ? $value->title : $value->name }}</h2>
 						<p class="post-message">{{ $value->description }}</p>
 						@if($value->picture != null)
 							<img class="post-img" src="{{ $value->picture }}">

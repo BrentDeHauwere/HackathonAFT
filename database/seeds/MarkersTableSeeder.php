@@ -29,7 +29,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 50.851579,
                 'lng'           => 4.348977,
                 'type'          => 'Discotheek',
-                'title'         => 'Marker 2',
+                'title'         => 'Madame Moustache',
                 'description'   => 'Hipste club van Brussel. Zeker de moeite om hier te komen feesten.',
                 'picture'       => 'http://www.brusselslife.be/sites/default/files/gallery/madame_moustache_02.jpg',
                 'user_id'       => 2
@@ -40,7 +40,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 50.855417,
                 'lng'           => 4.351881,
                 'type'          => 'Bar',
-                'title'         => 'Marker 3',
+                'title'         => 'Bar Bik',
                 'description'   => 'Ziek nice bar! Echt wauw. Wow. Geweldig. Ongelofelijk. Much Wow.',
                 'picture'       => 'http://assets.digi.persgroep.be/location_photo/w500/91/L_0000189591.jpg',
                 'user_id'       => 2
@@ -51,7 +51,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 50.839866,
                 'lng'           => 4.393252,
                 'type'          => 'Museum',
-                'title'         => 'Marker 4',
+                'title'         => 'Autoworld',
                 'description'   => 'Voor de autofanaten, zeker hier eens passeren. Intersante expo over Italian supercars.',
                 'picture'       => 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Autoworld_002.jpg',
                 'user_id'       => 3
@@ -63,7 +63,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 50.845310,
                 'lng'           => 4.350019,
                 'type'          => 'Monument',
-                'title'         => 'Marker 5',
+                'title'         => 'Manneken Pis',
                 'description'   => 'Meest iconische plaats in heel Brussel.',
                 'picture'       => 'http://www.scientias.nl/wp-content/uploads/2015/08/manneken-pis.jpg',
                 'user_id'       => 4

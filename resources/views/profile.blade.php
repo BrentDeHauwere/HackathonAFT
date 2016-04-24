@@ -82,7 +82,7 @@
 
 			<ul class="posts">
 				@foreach($user->markers as $marker)
-					<li class="roundedBox"> {{ '@' . $marker->name }}
+					<li class="roundedBox"> {{ '@' . ($marker->name == null) ? $marker->title : $marker->name }}
 						<div class="votes">
 							<svg class="pHeart" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 21.66 20.26">
 								<defs>
