@@ -60,13 +60,10 @@ class MarkerController extends Controller
 	{
 		// Server-side validation
 		$this->validate($request, [
-			'name' 			=> 'required',
-			'address'    	=> 'required',
 			'lat'			=> 'required|numeric',
 			'lng'			=> 'required|numeric',
-			'type'			=> 'required',
 			'title'			=> 'required',
-			'picture'		=> 'image',
+			'picture'		=> 'url',
 		]);
 
 		$marker = new Marker;

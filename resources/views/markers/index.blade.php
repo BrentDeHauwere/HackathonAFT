@@ -68,7 +68,7 @@
 			</section>
 
 			<section id="modal">
-				<form class="new-place-modal">
+				<form class="new-place-modal" method="post" action="/markers">
 					<h2>add new place</h2>
 					<a href="#" id="modal-close">
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="48.8px" height="48.8px" viewbox="0 0 48.8 48.8" style="enable-background:new 0 0 48.8 48.8;" xml:space="preserve">
@@ -80,9 +80,9 @@
 					</a>
 					<div class="modal-content">
 						<div class="col-1">
-							<input id="modal-title" type="text" placeholder="title*">
-							<textarea id="modal-message" name="message" placeholder="message"></textarea>
-							<input id="modal-url" type="text" placeholder="put image URL here">
+							<input id="modal-title" type="text" name="title" placeholder="title*">
+							<textarea id="modal-message" name="description" placeholder="description"></textarea>
+							<input id="modal-url" type="text" name="picture" placeholder="put image URL here">
 						</div>
 						<div class="col-2">
 							<div id="modal-maps"></div>
@@ -93,7 +93,8 @@
 						<input type="submit" value="add place">
 					</div>
 					<input type="hidden" name="lat" id="modal-lat">
-					<input type="hidden" name="long" id="modal-long">
+					<input type="hidden" name="lng" id="modal-long">
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				</form>
 			</section>
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCHv7f5WI-1gPWnyQXJwNup90GLu3IzELc&callback=initMap"></script>
