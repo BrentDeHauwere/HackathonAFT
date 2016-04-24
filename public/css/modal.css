@@ -236,4 +236,78 @@ h5 {
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color:    #4D606E;
 }
+
+#map-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+#map-modal #map-modal-location-name {
+  font-family: Quicksand;
+  font-size: 20px;
+  border: 1px solid lightgray;
+  display: block;
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: #4D606E;
+  border: 1px solid 1px solid lightgray;
+  border-radius: 5px; }
+#map-modal #map-modal-location-name ::-webkit-input-placeholder {
+  color: #4D606E;
+  font-size: 20px; }
+#map-modal #map-modal-location-name :-moz-placeholder {
+  color: #4D606E;
+  font-size: 20px; }
+#map-modal #map-modal-location-name ::-moz-placeholder {
+  color: #4D606E;
+  font-size: 20px; }
+#map-modal #map-modal-location-name :-ms-input-placeholder {
+  color: #4D606E;
+  font-size: 20px; }
+#map-modal h2 {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  text-align: center;
+  color: #4D606E;
+  font-family: Quicksand; }
+#map-modal #map-modal-close svg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 25px;
+  top: 25px; }
+#map-modal #map-modal-close svg .st0 {
+  fill: none;
+  stroke: #4D606E;
+  stroke-miterlimit: 10;
+  stroke-width: 3; }
+#map-modal .map-modal-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
+
 /*# sourceMappingURL=modal.css.map */
