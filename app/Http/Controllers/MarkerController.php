@@ -100,7 +100,7 @@ class MarkerController extends Controller
 	{
 		$marker = Marker::find($id);
 
-		if ($marker->user_id !== Auth::id())
+		if ($marker->user_id != Auth::user()->id)
 			abort(403, 'Unauthorized action.');
 
 		return View::make('markers.edit')
@@ -159,7 +159,7 @@ class MarkerController extends Controller
 	{
 		$marker = Marker::find($id);
 
-		if ($marker->user_id !== Auth::id())
+		if ($marker->user_id != Auth::user()->id)
 			abort(403, 'Unauthorized action.');
 
 		$marker->delete();
