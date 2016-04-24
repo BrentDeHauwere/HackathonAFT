@@ -60,7 +60,7 @@
 							<p class="dislike-counter">{{ $value->dislike }}</p>
 							<img class="fav-icon icon" src="svg/fav-icon.svg">
 							<p class="fav-counter">{{ $value->favorite }}</p>
-							<p class="location">@Grand Place</p>
+							<p class="location">{{ '@' . $value->type }}</p>
 							<img class="post-profile-picture" src="img/profielfoto.png">
 						</footer>
 					</article>
