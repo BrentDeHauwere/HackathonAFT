@@ -32,7 +32,9 @@ header {
     border: none;
     background: white;
     cursor: pointer;
-    text-decoration: none; }
+    text-decoration: none;
+    margin-bottom: 12px;
+  }
     .menu-buttons button:first-of-type, .menu-buttons a:first-of-type {
       margin-bottom: 12px; }
 
@@ -191,6 +193,7 @@ select {
   margin-top: 12px;
   text-decoration: none;
   color: #000;
+  width: auto !important;
 }
 
 /*# sourceMappingURL=index.css.map */
