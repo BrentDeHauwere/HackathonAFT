@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\View;
 
 use App\Marker;
+use App\Rate;
+use App\Favorite;
 use App\Http\Requests;
 
 use Auth;
@@ -23,6 +25,17 @@ class MarkerController extends Controller
 	{
 		$markers = Marker::all();
 
+		foreach ($markers as $marker)
+		{
+			$marker->like = Rate::where('marker_id', '=', $marker->id)->where('like', '=', true)->count();
+			$marker->dislike = Rate::where('marker_id', '=', $marker->id)->where('like', '=', false)->count();
+			$marker->favorite = $marker->favorites()->count();
+
+			$marker->likeUser = Rate::where('marker_id', '=', $marker->id)->where('user_id', '=', Auth::user()->id)->where('like', '=', true)->count() == 1;
+			$marker->dislikeUser = Rate::where('marker_id', '=', $marker->id)->where('user_id', '=', Auth::user()->id)->where('like', '=', false)->count() == 1;
+			$marker->favoriteUser = Favorite::where('marker_id', '=', $marker->id)->where('user_id', '=', Auth::user()->id)->count() == 1;
+		}
+		
 		return View::make('markers.index')
 			->with('markers', $markers);
 	}
@@ -85,6 +98,14 @@ class MarkerController extends Controller
 	{
 		$marker = Marker::find($id);
 
+		$marker->like = Rate::where('marker_id', '=', $marker->id)->where('like', '=', true)->count();
+		$marker->dislike = Rate::where('marker_id', '=', $marker->id)->where('like', '=', false)->count();
+		$marker->favorite = $marker->favorites()->count();
+
+		$marker->likeUser = Rate::where('marker_id', '=', $marker->id)->where('user_id', '=', Auth::user()->id)->where('like', '=', true)->count() == 1;
+		$marker->dislikeUser = Rate::where('marker_id', '=', $marker->id)->where('user_id', '=', Auth::user()->id)->where('like', '=', false)->count() == 1;
+		$marker->favoriteUser = Favorite::where('marker_id', '=', $marker->id)->where('user_id', '=', Auth::user()->id)->count() == 1;
+
 		return View::make('markers.show')
 			->with('marker', $marker);
 	}
@@ -101,7 +122,7 @@ class MarkerController extends Controller
 		$marker = Marker::find($id);
 
 		if ($marker->user_id != Auth::user()->id)
-			abort(403, 'Unauthorized action.');
+			abort(401, 'Unauthorized action.');
 
 		return View::make('markers.edit')
 			->with('marker', $marker);
@@ -119,8 +140,8 @@ class MarkerController extends Controller
 	{
 		$marker = Marker::find($id);
 
-		if ($marker->user_id !== Auth::id())
-			abort(403, 'Unauthorized action.');
+		if ($marker->user_id != Auth::user()->id)
+			abort(401, 'Unauthorized action.');
 
 		// Server-side validation
 		$this->validate($request, [
@@ -145,7 +166,7 @@ class MarkerController extends Controller
 		$marker->save();
 
 		$request->session()->flash('message', 'Successfully updated marker.');
-		return Redirect::to('markers')->with('message', 'test');
+		return Redirect::to('markers');
 	}
 
 	/**
@@ -160,7 +181,7 @@ class MarkerController extends Controller
 		$marker = Marker::find($id);
 
 		if ($marker->user_id != Auth::user()->id)
-			abort(403, 'Unauthorized action.');
+			abort(401, 'Unauthorized action.');
 
 		$marker->delete();
 
