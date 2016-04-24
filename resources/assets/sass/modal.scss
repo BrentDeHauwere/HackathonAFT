@@ -145,3 +145,70 @@ $pink: #EA5455;
         }
     }
 }
+
+#map-modal {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+
+    #map-modal-location-name  {
+        font-family: Quicksand;
+        font-size: 20px;
+        border: $gray-border;
+
+        display: block;
+        width: calc(100% - 40px);
+        margin: 20px auto;
+        padding: 10px 20px;
+        color: $gray-text;
+        border: 1px solid $gray-border;
+        border-radius: 5px;
+
+        @include placeholder {
+            color: $gray-text;
+            font-size: 20px;
+        }
+    }
+
+    h2 {
+        flex: 0 1 auto;
+        text-align: center;
+        color: $gray-text;
+        font-family: Quicksand;
+    }
+
+    #map-modal-close {
+        svg {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 25px;
+            top: 25px;
+
+            .st0{
+                fill: none;
+                stroke: #4D606E;
+                stroke-miterlimit: 10;
+                stroke-width: 3;
+            }
+        }
+    }
+
+    .map-modal-content {
+        display: flex;
+        flex-flow: row;
+        border: $gray-border;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        flex: 1 1 auto;
+    }
+}

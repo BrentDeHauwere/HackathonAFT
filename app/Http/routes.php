@@ -26,3 +26,7 @@ Route::get('/modal', function () {
 Route::get('/index', function () {
     return view('index');
 });
+
+Route::get('/profile', function () {
+    return view('profile');
+});

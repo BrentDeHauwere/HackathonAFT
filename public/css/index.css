@@ -2,8 +2,9 @@ body {
   margin: 0;
   padding: 0;
   background: #FFF;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 100; }
+  font-family: 'Quicksand', sans-serif !important;
+  font-weight: 100;
+  color: #4D606E; }
 
 .plus-icon {
   fill: white; }
@@ -19,18 +20,21 @@ header {
 .menu-buttons {
   position: fixed;
   z-index: 99;
-  right: 32px;
-  top: 48px;
-  width: 48px; }
-
-.menu-buttons button {
-  width: 48px;
-  height: 48px;
-  border-radius: 100%;
-  border: none;
-  background: #FFF;
-  margin-bottom: 12px;
-  cursor: pointer; }
+  right: 10px;
+  top: 20px;
+  width: 80px;
+  text-align: center; }
+  .menu-buttons button, .menu-buttons a {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    border: none;
+    background: #FFF;
+    cursor: pointer;
+    text-decoration: none; }
+    .menu-buttons button:first-of-type, .menu-buttons a:first-of-type {
+      margin-bottom: 12px; }
 
 .profile-button {
   background-image: url(../img/profielfoto.png) !important;
@@ -76,8 +80,12 @@ header {
   top: 50px;
   left: 25%; }
 
-.info-balk p {
-  display: inline-block; }
+.info-balk {
+  margin: 15px 0 5px 0;
+  font-weight: 500; }
+  .info-balk p {
+    display: inline-block;
+    padding-left: 20px; }
 
 select {
   border: none;
@@ -104,6 +112,12 @@ select {
   height: 265px;
   float: left; }
 
+h1 {
+  font-size: 15pt !important;
+  padding: 8px !important;
+  background: #3D84A8;
+  color: #FFF; }
+
 .grid-item--width2 {
   width: 300px; }
 
@@ -117,7 +131,9 @@ select {
   font-size: 1.4em;
   line-height: 1em;
   height: 150px;
-  padding: 32px 16px;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   color: #FFF; }
 
 footer {
@@ -127,53 +143,50 @@ footer {
   width: 100%;
   height: auto; }
 
+.like-counter,
+.dislike-counter,
+.fav-counter,
+.dislike-icon,
+.fav-icon,
 .like-icon {
   display: inline-block;
-  float: left; }
+  float: left;
+  font-weight: 700; }
+
+.like-counter,
+.dislike-counter,
+.fav-counter {
+  margin: 20px 0 0 0;
+  padding: 0; }
 
 .like-counter {
-  display: inline-block;
-  float: left;
-  color: #EA5455;
-  font-weight: 700; }
-
-.dislike-icon {
-  display: inline-block;
-  float: left; }
+  color: #EA5455; }
 
 .dislike-counter {
-  display: inline-block;
-  float: left;
-  color: #4D606E;
-  font-weight: 700; }
-
-.fav-icon {
-  display: inline-block;
-  float: left; }
+  color: #4D606E; }
 
 .fav-counter {
-  display: inline-block;
-  float: left;
-  color: #FAB57A;
-  font-weight: 700; }
+  color: #FAB57A; }
 
 .location {
   display: inline-block;
   float: left;
+  margin-top: 15px;
   margin-left: 10px;
   margin-right: 20px; }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin: 17px 5px 8px 5px; }
 
 .post-profile-picture {
   display: inline-block;
   width: 32px;
   height: 32px;
-  margin-top: 8px;
-  float: left; }
+  margin-top: 10px;
+  margin-right: 8px;
+  float: right; }
 
 .map {
   width: 100%;

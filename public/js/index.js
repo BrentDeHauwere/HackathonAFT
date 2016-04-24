@@ -27,6 +27,25 @@ $(document).ready(function(){
 		},
 		enableAutocomplete: true
 	});
+
+	$("#map-modal .map-modal-content").locationpicker({
+		location: {
+			latitude: loc.lat,
+			longitude: loc.long,
+			enableReverseGeocode: false
+		},
+		radius: 0,
+		zoom: 14,
+		onchanged: function(currentLocation, radius, isMarkerDropped) {
+
+		},
+		inputBinding: {
+			locationNameInput: $('#map-modal-location-name')
+		},
+		enableAutocomplete: true
+	});
+
+	$("#map-modal").hide();
 });
 
 /* EVENT LISTENERS */
@@ -41,10 +60,24 @@ $(window).scroll(function (event) {
 
 $(document).on("click", ".add-button", function() {
 	$("#modal").fadeIn(500);
+	setTimeout(function () {
+		$("#modal-maps").locationpicker('autosize');
+	}, 1000);
 });
 
 $(document).on("click", "#modal-close", function() {
 	$("#modal").fadeOut(500);
+});
+
+$(document).on("click", ".map-button", function() {
+	$("#map-modal").fadeIn(500);
+	setTimeout(function () {
+		$("#map-modal .map-modal-content").locationpicker('autosize');
+	}, 1000);
+});
+
+$(document).on("click", "#map-modal-close", function() {
+	$("#map-modal").fadeOut(500);
 });
 
 $(document).on("keypress", "#modal-location-name", function(event) {

@@ -1,0 +1,91 @@
+body {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-name: noscroll;
+  animation-name: noscroll; }
+
+@-webkit-keyframes noscroll {
+  0% {
+    overflow: hidden; }
+  100% {
+    overflow: auto; } }
+
+@keyframes noscroll {
+  0% {
+    overflow: hidden; }
+  100% {
+    overflow: auto; } }
+
+.posts li {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-name: slidein;
+  animation-name: slidein; }
+
+@-webkit-keyframes slidein {
+  0% {
+    margin-top: 10%;
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  100% {
+    margin-left: 0%;
+    opacity: 1; } }
+
+@keyframes slidein {
+  0% {
+    margin-top: 10%;
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  100% {
+    margin-left: 0%;
+    opacity: 1; } }
+
+.profilePic {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: scaleuppic;
+  animation-name: scaleuppic; }
+
+@-webkit-keyframes scaleuppic {
+  0% {
+    width: 0;
+    border: none; }
+  50% {
+    width: 116px;
+    border: solid 2px #ea5455; } }
+
+@keyframes scaleuppic {
+  0% {
+    width: 0;
+    border: none; }
+  50% {
+    width: 116px;
+    border: solid 2px #ea5455; } }
+
+.links {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-name: slidein;
+  animation-name: slidein; }
+
+.profileBox {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-name: fadein;
+  animation-name: fadein; }
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=animations.css.map */
