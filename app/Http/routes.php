@@ -22,4 +22,7 @@ Route::group(['middleware' => 'auth'], function()
 {
 	Route::resource('markers', 'MarkerController');
 	Route::get('/home', 'HomeController@index');
+	Route::post('/marker/{id}/rate/{like}', 'RateController@store');
+	Route::delete('/marker/{id}/rate', 'RateController@destroy');
+	Route::post('/marker/{id}/favorite', 'FavoriteController@store');
 });
