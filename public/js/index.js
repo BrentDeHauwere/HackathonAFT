@@ -2,9 +2,10 @@ var loc = {
 		lat: 50.850619,
 		long: 4.356162
 	},
-	map;
+	map,
+	markers;
 
-$(document).ready(function(){
+$(document).ready(function() {
 	$('.grid').masonry({
 	  itemSelector: '.grid-item',
 	  columnWidth: 160,
@@ -29,9 +30,11 @@ $(document).ready(function(){
 		enableAutocomplete: true
 	});
 
-
-
 	$("#map-modal").hide();
+});
+
+$.getJSON('coordinates', function(data) {
+	markers = data;
 });
 
 /* EVENT LISTENERS */
@@ -64,7 +67,7 @@ $(document).on("click", ".map-button", function() {
 			enableReverseGeocode: false
 		}
 
-		if($("#map-modal").attr("lat").length && $("#map-modal").attr("long").length) {
+		if($("#map-modal").attr("lat") && $("#map-modal").attr("long")) {
 			location.latitude = $("#map-modal").attr("lat");
 			location.longitude = $("#map-modal").attr("long");
 		}
@@ -81,6 +84,25 @@ $(document).on("click", ".map-button", function() {
 			},
 			enableAutocomplete: true
 		});
+
+		if(markers !== undefined) {
+			var map = $("#map-modal .map-modal-content").locationpicker('map').map;
+			console.log(markers);
+			$.each(markers, function (i, value) {
+				var marker = new google.maps.Marker({
+						position: new google.maps.LatLng(value.lat, value.lng),
+						map: map,
+						title: value.name
+					}),
+					infowindow = new google.maps.InfoWindow({
+						content: "<h4>" + value.name + "</h4>"
+					});
+
+				marker.addListener('click', function() {
+					infowindow.open(map, marker);
+				});
+			});
+		}
 
 		$("#map-modal .map-modal-content").locationpicker('autosize');
 	}, 1000);
