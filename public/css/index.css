@@ -185,4 +185,12 @@ select {
 .grid {
   width: 985px; }
 
+.logOut {
+  float: left;
+  margin-left: -80px;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #000;
+}
+
 /*# sourceMappingURL=index.css.map */

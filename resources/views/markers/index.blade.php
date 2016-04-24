@@ -30,6 +30,7 @@
 		</header>
 
 		<section class="menu-buttons">
+			<a href="/logout" class="logOut">log out</a>
 			<a class="profile-button" href="/profile"></a>
 			<button class="map-button"></button>
 		</section>
