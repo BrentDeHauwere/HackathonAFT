@@ -97,6 +97,22 @@
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 				</form>
 			</section>
-		</body>
+			
+			<section id="map-modal">
+				<h2>map</h2>
+				<a href="#" id="map-modal-close">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="48.8px" height="48.8px" viewBox="0 0 48.8 48.8" style="enable-background:new 0 0 48.8 48.8;" xml:space="preserve">
+                    <g>
+						<line class="st0" x1="1.1" y1="1.1" x2="49.2" y2="49.2" />
+						<line class="st0" x1="1.1" y1="49.2" x2="49.2" y2="1.1" />
+					</g>
+                </svg>
+				</a>
+				<input type="text" id="map-modal-location-name">
+				<div class="map-modal-content">
 
+				</div>
+			</section>
+		</section>
+	</body>
 </html>
