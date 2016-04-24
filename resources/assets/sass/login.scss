@@ -17,6 +17,10 @@ header {
 	}
 }
 
+.main-content {
+    text-align: center;
+}
+
 .logo {
 	width: 270PX;
 	height: 200PX;
@@ -29,16 +33,16 @@ input {
 	border: none;
 }
 
-button {
+.submit-button {
+    margin: auto;
+    display: block;
 	background: #EA5455;
-	position: absolute;
-	margin-top: 80px;
-	margin-left: -275px;
 	border: none;
 	width: 88px;
 	height: 33px;
 	color: #FFF;
 	border-radius: 5px;
+	cursor: pointer;
 }
 
 article {
@@ -46,7 +50,10 @@ article {
 	margin: auto;
 	background: #FFF;
 	border-radius: 5px;
-	
+}
+
+#title-tab1 {
+    border-radius: 5px 0 0 0;
 }
 
 #title-tab2 {
@@ -68,10 +75,10 @@ h2 {
 
 .selected-tab {
 	background-color: #FFF;
-}
-
-.selected-tab a{
-	color: #000;
+    
+    a {
+        color: #000;
+    }
 }
 
 a {
@@ -79,6 +86,34 @@ a {
 	text-decoration: none;
 }
 
+#a-forgot-password {
+    display: inline-block;
+    margin: 20px 0;
+}
 
+#form-forgot-password {
+    width: 500px;
+    margin: 0 auto;
+}
 
+#email-forgot-password {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-left: 2%;
+    height: 50px;
+}
 
+#skyline {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    .st0 {
+        fill: #333333;
+    }
+}
+
+#login-register {
+    margin: auto;
+}

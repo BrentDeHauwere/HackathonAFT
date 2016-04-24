@@ -28,9 +28,22 @@ $pink: #EA5455;
         color: $gray-text;
         font-family: Quicksand;
     }
-    
-    a {
-        
+
+    #modal-close {
+        svg {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            right: 25px;
+            top: 25px;
+
+            .st0{
+                fill: none;
+                stroke: #4D606E;
+                stroke-miterlimit: 10;
+                stroke-width: 3;
+            }
+        }
     }
     
     .modal-content {

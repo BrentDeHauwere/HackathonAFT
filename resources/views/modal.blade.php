@@ -14,7 +14,17 @@
 <body>
     <form class="new-place-modal">
         <h2>add new place</h2>
-        <a href="#" id="modal-close"></a>
+        <a href="#" id="modal-close">
+            <svg version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                 x="0px" y="0px" width="48.8px" height="48.8px" viewBox="0 0 48.8 48.8" style="enable-background:new 0 0 48.8 48.8;"
+                 xml:space="preserve">
+                <g>
+                    <line class="st0" x1="0.4" y1="0.4" x2="48.5" y2="48.5"/>
+                    <line class="st0" x1="0.4" y1="48.5" x2="48.5" y2="0.4"/>
+                </g>
+            </svg>
+        </a>
         <div class="modal-content">
             <div class="col-1">
                 <textarea id="modal-message" name="message" placeholder="message"></textarea>

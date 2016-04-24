@@ -78,6 +78,16 @@ var App = (function() {
             this.canvas.width / 2 /* x */, this.canvas.height + (this.moon.r * 2) /* y */, this.canvas.width / 2 /* r */);
         this.moon.update(-(this.sky.r * 0.9), 0, 50, {r: 226, g: 246, b: 225});
         this.sun.update(this.sky.r * 0.9, 0, 50, {r: 242, g: 208, b: 22});
+        
+        $("#skyline .st0").css({
+            fill: App.getColorBasedOnTime(this.time, App.ColorType.SKYLINE)
+        });
+        
+        $("#skyline, #skyline .st0").width(Viewport.getWidth());
+        $("#skyline, #skyline .st0").height(Viewport.getWidth() * (338 / 1269));
+        
+        $("#login-register").width($("#login-register").width());
+        $("#forgot-password").width($("#login-register").width());
     };
 
     App.prototype.resize = function() {
@@ -91,7 +101,7 @@ var App = (function() {
         var color, darken;
 
         switch(type) {
-            case App.ColorType.BUILDINGS:
+            case App.ColorType.SKYLINE:
                 darken = true;
                 type = App.Colors.sky;
                 break;
@@ -120,7 +130,7 @@ var App = (function() {
 
     App.ColorType = {
         SKY: 0,
-        BUILDINGS: 1
+        SKYLINE: 1
     };
 
     App.Colors = {
@@ -145,22 +155,40 @@ var App = (function() {
 
 new App();
 
-$(document).ready(function(){
+$(document).ready(function() {
+    $("#forgot-password").css({
+        display: "none",
+        height: 0
+    });
+    
     $("#tab2").find( "form" ).hide();
-    $("#title-tab1").css("border-radius","5px 0 0 0");
-    $("#title-tab2").click(function(){
+    $("input[for='form-register']").hide();
+    
+    $("#title-tab2").click(function() {
         $("#tab1").find( "form" ).hide();
         $("#tab2").find( "form" ).show();
         $("#title-tab2").addClass("selected-tab");
         $("#title-tab1").removeClass("selected-tab");
         $(".selected-tab").css("border-radius","0 5px 0 0");
-
+        $("input[for='form-register']").show();
+        $("input[for='form-login']").hide();
     });
-    $("#title-tab1").click(function(){
+    
+    $("#title-tab1").click(function() {
         $("#tab2").find( "form" ).hide();
         $("#tab1").find( "form" ).show();
         $("#title-tab1").addClass("selected-tab");
         $("#title-tab2").removeClass("selected-tab");
         $(".selected-tab").css("border-radius","5px 0 0 0");
+        $("input[for='form-register']").hide();
+        $("input[for='form-login']").show();
+    });
+    
+    $(document).on("click", "#a-forgot-password", function() {
+        
+        $("#login-register").slideUp(500, function() {
+            $("#forgot-password").slideDown();
+        });
+        
     });
 });

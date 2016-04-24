@@ -95,6 +95,17 @@ h5 {
     text-align: center;
     color: #4D606E;
     font-family: Quicksand; }
+  .new-place-modal #modal-close svg {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 25px;
+    top: 25px; }
+    .new-place-modal #modal-close svg .st0 {
+      fill: none;
+      stroke: #4D606E;
+      stroke-miterlimit: 10;
+      stroke-width: 3; }
   .new-place-modal .modal-content {
     display: -webkit-flex;
     display: -ms-flexbox;
