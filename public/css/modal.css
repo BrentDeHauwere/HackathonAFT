@@ -1,0 +1,206 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ * Source: https://gist.github.com/joshuapowell/1680540
+ * 
+ */
+html, body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  width: 100%;
+  height: 100%; }
+
+div, span, object, iframe, img, table, caption, thead, tbody,
+tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
+nav, footer, header, section, summary, mark, audio, video {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
+del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+ol, ul, li, fieldset, legend, label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+  display: block; }
+
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+  table caption, table th, table td {
+    text-align: left;
+    vertical-align: middle; }
+
+a img {
+  border: 0; }
+
+:focus {
+  outline: 0; }
+
+/* Heading font sizes */
+/* Source: http://webdesign.tutsplus.com/articles/taking-the-erm-out-of-ems--webdesign-12321 */
+h1 {
+  font-size: 2.25rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.3125rem; }
+
+h4 {
+  font-size: 1.125rem; }
+
+h5 {
+  font-size: 1rem; }
+
+.new-place-modal {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+  .new-place-modal h2 {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    text-align: center;
+    color: #4D606E;
+    font-family: Quicksand; }
+  .new-place-modal .modal-content {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    border: 1px solid lightgray;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 20px 0;
+    box-sizing: border-box; }
+    .new-place-modal .modal-content textarea, .new-place-modal .modal-content input, .new-place-modal .modal-content label {
+      font-family: Quicksand;
+      font-size: 20px;
+      border: 1px solid lightgray; }
+      .new-place-modal .modal-content textarea ::-webkit-input-placeholder, .new-place-modal .modal-content input ::-webkit-input-placeholder, .new-place-modal .modal-content label ::-webkit-input-placeholder {
+        color: #4D606E;
+        font-size: 20px; }
+      .new-place-modal .modal-content textarea :-moz-placeholder, .new-place-modal .modal-content input :-moz-placeholder, .new-place-modal .modal-content label :-moz-placeholder {
+        color: #4D606E;
+        font-size: 20px; }
+      .new-place-modal .modal-content textarea ::-moz-placeholder, .new-place-modal .modal-content input ::-moz-placeholder, .new-place-modal .modal-content label ::-moz-placeholder {
+        color: #4D606E;
+        font-size: 20px; }
+      .new-place-modal .modal-content textarea :-ms-input-placeholder, .new-place-modal .modal-content input :-ms-input-placeholder, .new-place-modal .modal-content label :-ms-input-placeholder {
+        color: #4D606E;
+        font-size: 20px; }
+    .new-place-modal .modal-content .col-1 {
+      width: 60%;
+      float: left;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .new-place-modal .modal-content .col-1 #modal-message, .new-place-modal .modal-content .col-1 #modal-image-container {
+        display: block;
+        padding: 20px;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto; }
+      .new-place-modal .modal-content .col-1 #modal-image-container {
+        position: relative; }
+        .new-place-modal .modal-content .col-1 #modal-image-container input {
+          opacity: 0; }
+        .new-place-modal .modal-content .col-1 #modal-image-container #modal-image-label label {
+          padding: 20px;
+          height: calc(100% - 40px);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          margin: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0; }
+          .new-place-modal .modal-content .col-1 #modal-image-container #modal-image-label label svg {
+            margin: 0 auto;
+            width: 20%;
+            height: 20%; }
+    .new-place-modal .modal-content .col-2 {
+      width: 40%;
+      float: left;
+      position: relative;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .new-place-modal .modal-content .col-2 #modal-maps {
+        width: 100%;
+        height: 100%;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto; }
+      .new-place-modal .modal-content .col-2 input {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        width: calc(100% - 40px);
+        padding: 10px 20px;
+        box-sizing: border-box; }
+  .new-place-modal #modal-submit {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto; }
+    .new-place-modal #modal-submit input {
+      font-family: Quicksand;
+      font-size: 15px;
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #EA5455;
+      color: white;
+      border: 0 none;
+      cursor: pointer;
+      border-radius: 5px; }
+
+/*# sourceMappingURL=modal.css.map */
