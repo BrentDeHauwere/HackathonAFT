@@ -48,7 +48,47 @@
 
 	<section class="message-wall grid">
 		<article class="wall-post grid-item">
-			<h1>The Grand Place</h1>
+			<h2>The Grand Place</h2>
+			<p class="post-message">The Grand Place of Brussels was great! A great place to visit. Such beauty much great! Very wow.</p>
+			<footer>
+				<img class="like-icon icon" src="svg/like-icon.svg">
+				<p class="like-counter">0</p>
+				<img class="dislike-icon icon" src="svg/dislike-icon.svg">
+				<p class="dislike-counter">0</p>
+				<img class="fav-icon icon" src="svg/fav-icon.svg">
+				<p class="fav-counter">0</p>
+				<p class="location">@Grand Place</p>
+				<img class="post-profile-picture" src="img/profielfoto.png">
+			</footer>
+		</article>
+		<article class="wall-post grid-item grid-item--height2">
+			<img class="post-img" src="img/11327757204_bd60c8a657_c.jpg">
+			<footer>
+				<img class="like-icon icon" src="svg/like-icon.svg">
+				<p class="like-counter">0</p>
+				<img class="dislike-icon icon" src="svg/dislike-icon.svg">
+				<p class="dislike-counter">0</p>
+				<img class="fav-icon icon" src="svg/fav-icon.svg">
+				<p class="fav-counter">0</p>
+				<p class="location">@Grand Place</p>
+				<img class="post-profile-picture" src="img/profielfoto.png">
+			</footer>
+		</article>
+		<article class="wall-post grid-item">
+			<div id="map1" class="map"></div>
+			<footer>
+				<img class="like-icon icon" src="svg/like-icon.svg">
+				<p class="like-counter">0</p>
+				<img class="dislike-icon icon" src="svg/dislike-icon.svg">
+				<p class="dislike-counter">0</p>
+				<img class="fav-icon icon" src="svg/fav-icon.svg">
+				<p class="fav-counter">0</p>
+				<p class="location">@Grand Place</p>
+				<img class="post-profile-picture" src="img/profielfoto.png">
+			</footer>
+		</article>
+		<article class="wall-post grid-item">
+			<h2>The Grand Place</h2>
 			<p class="post-message">The Grand Place of Brussels was great! A great place to visit. Such beauty much great! Very wow.</p>
 			<footer>
 				<img class="like-icon icon" src="svg/like-icon.svg">

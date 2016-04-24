@@ -7,7 +7,24 @@ var loc = {
 $(document).ready(function(){
 	$('.grid').masonry({
 	  itemSelector: '.grid-item',
-	  columnWidth: 160
+	  columnWidth: 160,
+		gutter: 5
+	});
+
+	$.getJSON('map_points.json', function(data) {
+		var map = new google.maps.Map(document.getElementById("map_canvas"), {
+			center: new google.maps.LatLng(loc.lat, loc.long),
+				zoom: 5,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			});
+
+		$.each(data.points, function (i, value) {
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(value.lat, value.lon),
+				map: map,
+				title: "text " + value.lon
+			});
+		});
 	});
 
 	$("#modal-maps").locationpicker({

@@ -17,4 +17,5 @@ elixir(function(mix) {
     mix.sass('modal.scss');
     mix.sass('profile.scss');
     mix.sass('animations.scss');
+    mix.sass('colors.scss');
 });

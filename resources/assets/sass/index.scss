@@ -1,10 +1,12 @@
+@import "colors";
+
 body {
 	margin: 0;
 	padding: 0;
-	background: #FFF;
+	background: white;
 	font-family: 'Quicksand', sans-serif !important;
 	font-weight: 100;
-	color: #4D606E;
+	color: $blue-gray;
 }
 
 .plus-icon {
@@ -35,7 +37,7 @@ header {
 		height: 48px;
 		border-radius: 100%;
 		border: none;
-		background: #FFF;
+		background: white;
 		cursor: pointer;
 		text-decoration: none;
 
@@ -58,14 +60,14 @@ header {
 }
 
 .main-content {
-	width: 962px;
+	width: 969px;
 	margin: auto;
 }
 
 .add-button {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 15px;
-	background-color: #EA5455;
+	background-color: $pink-red;
 	color: white;
 	margin: 0 auto;
 	display: block;
@@ -109,38 +111,99 @@ header {
 select {
 	border: none;
 	outline: none;
-	background: #FFF;
+	background: white;
 	font-size: 1em;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 100;
-	color: #EA5455;
+	color: $pink-red;
 }
 
 .post-counter {
 	float: right;
 }
 
-.message-wall {
-	border: 1px solid #EAEAEA;
-}
-
 .wall-post {
-	border: 1px solid #3D84A8;
+	border: 1px solid $light-blue;
 	display: inline-block;
-	margin-bottom: 6px;
+	margin-bottom: 10px;
 }
 
 .grid-item {
 	width: 318px;
-	height: 265px;
+	height: auto;
 	float: left;
-}
 
-h1 {
-	font-size: 15pt !important;
-	padding: 8px !important;
-	background: #3D84A8;
-	color: #FFF;
+	h2 {
+		font-size: 1.4em;
+		padding: 16px;
+		background: $light-blue;
+		color: #FFF;
+	}
+
+	.post-message {
+		background-color: $light-blue;
+		margin: 0;
+		font-weight: 500;
+		font-size: 1.2em;
+		line-height: 1.2em;
+		height: 150px;
+		padding: 0 16px;
+		color: #FFF;
+	}
+
+	footer {
+		padding: 0 10px;
+		height: 52px;
+		line-height: 52px;
+
+		& * {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.location {
+			margin: 0 10px 0 5px;
+			cursor: pointer;
+		}
+
+		.icon {
+			width: 18px;
+			height: 18px;
+		}
+
+		.like-counter,
+		.dislike-counter,
+		.fav-counter,
+		.dislike-icon,
+		.fav-icon,
+		.like-icon {
+			font-weight: 700;
+		}
+
+		.like-counter,
+		.dislike-counter,
+		.fav-counter {
+			margin-right: 5px;
+			padding: 0;
+		}
+
+		.like-counter {
+			color: $pink-red;
+		}
+
+		.dislike-counter {
+			color: $blue-gray;
+		}
+
+		.fav-counter {
+			color: $skin;
+		}
+
+		.post-profile-picture {
+			width: 32px;
+			height: 32px;
+		}
+	}
 }
 
 .grid-item--width2 {
@@ -151,79 +214,10 @@ h1 {
 	height: 290px;
 }
 
-.post-message {
-	background-color: #3D84A8;
-	margin: 0;
-	font-weight: 500;
-	font-size: 1.4em;
-	line-height: 1em;
-	height: 150px;
-	padding-top: 16px;
-	padding-left: 16px;
-	padding-right: 16px;
-	color: #FFF;
-}
-
-footer {
-	padding-left: 5px;
-}
-
 .post-img {
 	width: 100%;
 	height: auto;
-}
-
-.like-counter,
-.dislike-counter,
-.fav-counter,
-.dislike-icon,
-.fav-icon,
-.like-icon {
-	display: inline-block;
-	float: left;
-	font-weight: 700;
-}
-
-.like-counter,
-.dislike-counter,
-.fav-counter {
-	margin: 20px 0 0 0;
-	padding: 0;
-}
-
-.like-counter {
-	color: #EA5455;
-}
-
-.dislike-counter {
-	color: #4D606E;
-}
-
-.fav-counter {
-	color: #FAB57A;
-}
-
-.location {
-	display: inline-block;
-	float: left;
-	margin-top: 15px;
-	margin-left: 10px;
-	margin-right: 20px;
-}
-
-.icon {
-	width: 18px;
-	height: 18px;
-	margin: 17px 5px 8px 5px;
-}
-
-.post-profile-picture {
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	margin-top: 10px;
-	margin-right: 8px;
-	float: right;
+	display: block;
 }
 
 .map {
@@ -240,4 +234,8 @@ footer {
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(255, 255, 255, 0.95);
+}
+
+.grid {
+	width: 985px;
 }
