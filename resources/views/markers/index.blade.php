@@ -52,7 +52,7 @@
 					<article class="wall-post grid-item" lat="{{ $value->lat }}" long="{{ $value->lng }}">
 						<h2>{{ $value->name  }}</h2>
 						<p class="post-message">{{ $value->description }}</p>
-						<img class="post-img" src="img/11327757204_bd60c8a657_c.jpg">
+						<img class="post-img" src="{{ $value->picture }}">
 						<footer>
 							<img class="like-icon icon" src="svg/like-icon.svg">
 							<p class="like-counter">{{ $value->like }}</p>
