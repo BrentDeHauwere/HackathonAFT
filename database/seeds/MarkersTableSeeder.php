@@ -42,7 +42,7 @@ class MarkersTableSeeder extends Seeder
                 'type'          => 'bar',
                 'title'         => 'Marker 3',
                 'description'   => 'Ziek nice bar!',
-                'picture'       => str_random(10),
+                'picture'       => 'http://assets.digi.persgroep.be/location_photo/w500/91/L_0000189591.jpg',
                 'user_id'       => 2
             ],
             [
