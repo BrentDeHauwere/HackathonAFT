@@ -18,7 +18,7 @@ class MarkersTableSeeder extends Seeder
                 'lat'           => 50.895568,
                 'lng'           => 4.337406,
                 'type'          => 'Cinema',
-                'title'         => 'Marker 1',
+                'title'         => 'Kinepolis',
                 'description'   => 'Gezellig een filmpje kijken met de vrienden.',
                 'picture'       => 'https://lh4.googleusercontent.com/proxy/zhEnxrGl1blTq4VgWJKDUZlM5h2AFx1aNAz8AL09cb1WGYJrzT0rzYPKh-2K8PHXAccK97lsEeRFE-L2BGQVmq9DXcHxVw=w408-h306',
                 'user_id'       => 1
