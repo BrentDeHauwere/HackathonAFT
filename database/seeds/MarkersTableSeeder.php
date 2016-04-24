@@ -41,7 +41,7 @@ class MarkersTableSeeder extends Seeder
                 'lng'           => 4.351881,
                 'type'          => 'bar',
                 'title'         => 'Marker 3',
-                'description'   => 'Ziek nice bar!',
+                'description'   => 'Ziek nice bar! Echt wauw. Wow. Geweldig. Ongelofelijk. Much Wow.',
                 'picture'       => 'http://assets.digi.persgroep.be/location_photo/w500/91/L_0000189591.jpg',
                 'user_id'       => 2
             ],
