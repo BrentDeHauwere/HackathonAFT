@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #39464F;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100; }
+
+header {
+  text-align: center;
+  margin: 50px 0 0 0; }
+  header canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+
+.main-content {
+  text-align: center; }
+
+.logo {
+  width: 270PX;
+  height: 200PX; }
+
+input {
+  width: 95%;
+  margin-left: 2%;
+  height: 50px;
+  border: none; }
+
+.submit-button {
+  margin: auto;
+  display: block;
+  background: #EA5455;
+  border: none;
+  width: 88px;
+  height: 33px;
+  color: #FFF;
+  border-radius: 5px;
+  cursor: pointer; }
+
+article {
+  width: 500px;
+  margin: auto;
+  background: #FFF;
+  border-radius: 5px; }
+
+#title-tab1 {
+  border-radius: 5px 0 0 0; }
+
+#title-tab2 {
+  position: relative;
+  top: 0; }
+
+h2 {
+  padding: 10px 0;
+  width: 250px;
+  float: left;
+  margin: 0;
+  text-align: center;
+  background-color: #EA5455;
+  font-weight: 100;
+  border-radius: 0 5px 0 0;
+  font-size: 1em; }
+
+.selected-tab {
+  background-color: #FFF; }
+  .selected-tab a {
+    color: #000; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+#a-forgot-password {
+  display: inline-block;
+  margin: 20px 0; }
+
+#form-forgot-password {
+  width: 500px;
+  margin: 0 auto; }
+
+#email-forgot-password {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding-left: 2%;
+  height: 50px; }
+
+#skyline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; }
+  #skyline .st0 {
+    fill: #333333; }
+
+#login-register {
+  margin: auto; }
+
+/*# sourceMappingURL=login.css.map */

@@ -11,15 +11,11 @@
 |
 */
 
-
-Route::get('/', function () {
-	return view('welcome');
-});
-
 Route::auth();
 
 Route::group(['middleware' => 'auth'], function()
 {
+	Route::get('/', 'MarkerController@index');
 	Route::resource('markers', 'MarkerController');
 	Route::get('/home', 'HomeController@index');
 	Route::post('/marker/{id}/rate/{like}', 'RateController@store');
