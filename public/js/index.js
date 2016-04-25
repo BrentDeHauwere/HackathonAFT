@@ -31,6 +31,10 @@ $(document).ready(function() {
 	});
 
 	$("#map-modal").hide();
+
+	setInterval(function() {
+		$('.grid').masonry();
+	}, 2000);
 });
 
 $.getJSON('coordinates', function(data) {
@@ -121,20 +125,6 @@ $(document).on("click", "#map-modal-close", function() {
 $(document).on("keypress", "#modal-location-name", function(event) {
 	return event.keyCode != 13;
 });
-
-function initMap() {
-	var myLatLng = {lat: -25.363, lng: 131.044};
-	map = new google.maps.Map(document.getElementById('map1'), {
-		center: myLatLng,
-		zoom: 8
-	});
-
-	var marker = new google.maps.Marker({
-		position: myLatLng,
-		map: map,
-		title: 'Hello World!'
-	});
-}
 
 /* FUNCTIONS */
 
